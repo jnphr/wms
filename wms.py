@@ -141,7 +141,7 @@ def value_per_item():
         print(f"{item}{value}\n")
 
 
-def re_stock():
+def lowest_qty():
     lowest = min(shoes, key=lambda x: x.quantity)
     print(f"{lowest.code} {lowest.product} has only {lowest.quantity} units available for sale.\n")
 
@@ -192,7 +192,7 @@ while True:
             print("View Low Stock\n")
             check_inventory()
             if shoes:
-                re_stock()
+                lowest_qty()
         elif menu == 7:
             print("Product Search\n")
             check_inventory()
